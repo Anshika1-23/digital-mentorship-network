@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentor Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7; /* Set background color to light purple */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background-color: #8a2be2; /* Set form background color to violet */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+      color: #fff; /* Set heading color to white */
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff; /* Set label color to white */
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: calc(100% - 12px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      background-color: #fff; /* Set button background color to white */
+      color: #8a2be2; /* Set button text color to violet */
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ddd; /* Lighten button background color on hover */
+    }
+  </style>
+</head>
+<body>
+  <form action="/mentors" method="POST"> 
+    <h2>Mentor Registration</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="expertise">Expertise:</label>
+    <input type="text" id="expertise" name="expertise" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>

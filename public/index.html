@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empower: A Mentorship Network</title>
+  <style>
+    /* Additional CSS styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7; /* White background */
+    }
+
+    header {
+      background-color: #8a2be2; /* Light purple background */
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between; /* Space items evenly */
+      align-items: center; /* Center items vertically */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #8a2be2;
+    }
+
+  .btn-mentor {
+  background-color: #fff; /* White background */
+  color: #8a2be2; /* Light purple text color */
+  padding: 0.6rem 1.5rem; /* Adjust padding */
+  border-radius: 30px; /* Adjust border-radius to create an oval shape */
+}
+
+.btn-mentor:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+    main {
+      text-align: center;
+      
+    }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 768px) {
+      header {
+        padding: 0.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      main {
+        padding-top: 4rem;
+      }
+    }
+    #ig {
+      padding-top: 40%;
+  background-image: url("img.jpg");  
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;}
+
+  .about-mentorship {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      background-color: #8a2be2;
+      color: #fff;
+    }
+
+    .about-mentorship-content {
+      flex: 1;
+      padding: 0 2rem;
+    }
+
+    .about-mentorship-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-mentorship-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .about-mentorship-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-mentorship-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .hero, .benefits, .testimonials {
+      background-color: #ffffff; 
+      padding: 3rem 0;
+
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero a:hover {
+      background-color: #555;
+    }
+
+    .benefits h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .benefits ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .benefits li {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .testimonials p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #8a2be2; /* Light purple background */
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem;
+      bottom: 0;
+      width: 100%;
+    }
+    .browse-mentors {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .mentor-card {
+      display: inline-block;
+      margin: 1rem;
+      text-align: center;
+    }
+
+    .mentor-image {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 0.5rem;
+    }
+
+    .mentor-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mentor-name {
+      font-weight: bold;
+    }
+
+    .mentor-expertise {
+      color: #555;
+    }
+
+    .contact-section {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Empower: Your Mentorship Journey</h1>
+    <nav>
+      <a href="/index.html" id="home">Home</a>
+      <a href="#" id="about">About Us</a>
+      <a href="#" id="features">browse mentor</a>
+      <a href="#" id="contact">Contact</a>
+      <a href="/register.html">Register</a>
+      <a href="/login.html" id="loginLink">Login</a>
+  <a href="#" id="logoutLink" style="display: none;">Logout</a>
+      <button class="btn-mentor" id="becomeMentorBtn">Become a Mentor</button>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div id="ig">
+  <h1>-</h1> </div>
+  <main id="home-content">
+    <section class="hero">
+      <h2>Find a Mentor. Elevate Your Potential.</h2>
+      <p>Empower connects you with experienced mentors to guide your career and personal development.</p>
+      <a href="#">Learn More</a>
+    </section>
+  
+  <div id="about-section">
+    <section class="about-mentorship">
+      <div class="about-mentorship-content">
+        <h2>About Mentorship</h2>
+        <p>Mentorship is a powerful relationship between a mentor and a mentee, aimed at providing guidance, support, and knowledge transfer. It is a two-way street where both parties benefit from shared experiences and expertise.</p>
+        <p>At Empower, we believe in the transformative power of mentorship to elevate careers, foster personal growth, and create lasting connections.</p>
+      </div>
+      <div class="about-mentorship-image">
+        <img src="pic1.jpg" alt="Mentorship Image">
+      </div>
+    </section>
+    <section class="benefits">
+      <h3>Benefits of Joining Empower</h3>
+      <ul>
+        <li>Gain valuable insights and guidance from experienced mentors.</li>
+        <li>Connect with like-minded individuals in your field.</li>
+        <li>Expand your network and open doors to new opportunities.</li>
+        <li>Develop your skills and knowledge in a supportive environment.</li>
+      </ul>
+    </section>
+  </div>
+  
+  <div id="features-section" class="browse-mentors">
+    <h2>Browse Mentors</h2>
+    <div class="mentor-card">
+      <div class="mentor-image">
+        <img src="john.jpeg" alt="Mentor 1">
+      </div>
+      <div class="mentor-name">John Doe</div>
+      <div class="mentor-expertise">Software Engineer</div>
+    </div>
+
+    <div class="mentor-card">
+      <div class="mentor-image">
+        <img src="jane.jpeg" alt="Mentor 2">
+      </div>
+      <div class="mentor-name">Jane Smith</div>
+      <div class="mentor-expertise">Data Scientist</div>
+    </div>
+
+    <div class="mentor-card">
+      <div class="mentor-image">
+        <img src="matheus.jpeg" alt="Mentor 1">
+      </div>
+      <div class="mentor-name">Matheus de Paula</div>
+      <div class="mentor-expertise">Growth Marketing Director</div>
+    </div>
+  </div>
+  <div id="contact-section" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+    <div class="contact-info">
+      <p>Email: info@empowermentorship.com</p>
+      <p>Phone: +1 (123) 456-7890</p>
+      <p>Address: 123 Mentorship Lane, Empower City, USA</p>
+    </div>
+  </div>
+  </main>
+</div>
+
+
+  <footer>
+    <p>&copy; 2024 Empower. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const homeLink = document.getElementById('home');
+
+    homeLink.addEventListener('click', () => {
+      homeContent.style.display = 'block';
+    });
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const homeLink = document.getElementById('home');
+      const aboutLink = document.getElementById('about');
+      const featuresLink = document.getElementById('features');
+      const contactLink = document.getElementById('contact');
+
+      const homeSection = document.getElementById('home-section');
+      const aboutSection = document.getElementById('about-section');
+      const featuresSection = document.getElementById('features-section');
+      const contactSection = document.getElementById('contact-section');
+
+      function scrollToSection(section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      homeLink.addEventListener('click', () => {
+        scrollToSection(homeSection);
+      });
+
+      aboutLink.addEventListener('click', () => {
+        scrollToSection(aboutSection);
+      });
+
+      featuresLink.addEventListener('click', () => {
+        scrollToSection(featuresSection);
+      });
+
+      contactLink.addEventListener('click', () => {
+        scrollToSection(contactSection);
+      });
+    });
+    document.getElementById('becomeMentorBtn').addEventListener('click', function() {
+    window.location.href = '/mentors.html'; // Redirect to the "Become a Mentor" page
+  });
+  const token = localStorage.getItem('jwt');
+
+  if (token) {
+    showLogoutButton(); // Show logout button if user is logged in
+  } else {
+    showLoginButton(); // Show login button if user is not logged in
+  }
+
+  // Function to show logout button and hide login button
+  function showLogoutButton() {
+    const loginLink = document.getElementById('loginLink');
+    const logoutLink = document.getElementById('logoutLink');
+    loginLink.style.display = 'none';
+    logoutLink.style.display = 'inline'; // Show logout link
+  }
+
+  // Function to show login button and hide logout button
+  function showLoginButton() {
+    const logoutLink = document.getElementById('logoutLink');
+    const loginLink = document.getElementById('loginLink');
+    logoutLink.style.display = 'none';
+    loginLink.style.display = 'inline'; // Show login link
+  }
+  const logoutLink = document.getElementById('logoutLink');
+  logoutLink.addEventListener('click', () => {
+    localStorage.removeItem('jwt'); // Remove JWT token from local storage
+    window.location.href = '/index.html'; // Redirect to home page after logout
+  });
+    
+  </script>
+</body>
+</html>
